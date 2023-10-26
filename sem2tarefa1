@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+double calcularmedia(double notas[], int tamanho);
+//------------------------------------------------------
+int main(){
+	
+ double notas[3];
+ double media;
+ int i;
+ 
+ 	printf("\ndigite a primera notas:\n");
+ 	for(i = 0; i < 3; i++){
+ 	printf("nota %d: " , i+1);
+ 	scanf("%lf" , &notas[i]);
+ }
+ 	media = calcularmedia(notas, 3);
+ 	printf("A media do aluno e : %.2f\n", media);
+ 	return 0;
+ }
+//--------------------------------------------------------- 
+double calcularmedia(double notas[], int tamanho) {
+
+ double soma = 0;
+ int i ;
+
+ 	for(i = 0; i < tamanho; i++){
+ 	soma += notas[i];
+	 }
+	 return soma /tamanho;
+	
+ }
