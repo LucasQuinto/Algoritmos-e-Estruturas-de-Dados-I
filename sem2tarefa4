@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+// Função para calcular o número de Fibonacci
+int fibonacci(int n) {
+    if (n <= 0) {
+        return 0;
+    } else if (n == 1) {
+        return 1;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+int main() {
+    int num;
+
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("O numero deve ser nao negativo.\n");
+    } else {
+        int fib = fibonacci(num);
+        printf("O Fibonacci de %d e: %d\n", num, fib);
+    }
+
+    return 0;
+}
